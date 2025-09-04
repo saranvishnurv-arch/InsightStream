@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightStream: Navigate the News Landscape</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            font-family: 'Inter', sans-serif;
+            color: #e5e7eb;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+        .quiz-option:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        .article-card {
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+        .floating {
+            position: absolute;
+            animation: float 6s ease-in-out infinite;
+            opacity: 0.5;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .floating:nth-child(1) { top: 10%; left: 10%; }
+        .floating:nth-child(2) { top: 20%; right: 15%; }
+        .floating:nth-child(3) { top: 40%; left: 20%; }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Hero Section -->
+    <section class="hero-bg relative overflow-hidden text-white py-20 md:py-32">
+        <div class="floating">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/13292476-28b4-4d82-a00e-a7afc1931fdd.png" alt="Abstract swirling shapes representing dynamic news flows in blue and white tones, symbolizing insight and navigation" />
+        </div>
+        <div class="floating">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e8caf7c5-41d1-4786-be76-c5c4676bfbdd.png" alt="Geometric patterns forming a compass-like design, indicating guidance through information landscapes" />
+        </div>
+        <div class="floating">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a7b136db-ac2b-4eb6-b8b9-a9530c76eadc.png" alt="Overlapping circles and lines depicting interconnected news nodes in a futuristic, minimalist style" />
+        </div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 fade-in">
+                InsightStream
+            </h1>
+            <p class="text-lg md:text-xl mb-8 fade-in delay-200">
+                Navigate the News Landscape: A Curated Guide for College Students
+            </p>
+            <button id="cta-btn" class="bg-white text-blue-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-200 transition duration-300">
+                Dive into Insights
+            </button>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="bg-gray-100 text-gray-800 py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Why InsightStream Matters</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="fade-in">
+                    <p class="text-lg mb-6">
+                        In an era of information overload, college students need reliable ways to filter credible news from sensationalism.
+                        InsightStream empowers you with tools to critically analyze sources, fact-check claims, and stay informed on topics
+                        relevant to your academic and personal growth.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Source Verification Templates</li>
+                        <li>Personalized News Dashboards</li>
+                        <li>Fact-Checking Workshops</li>
+                        <li>Campus-Specific Alerts</li>
+                    </ul>
+                </div>
+                <div class="fade-in delay-300">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1d55c853-bd69-41f3-8e68-d5246c82731f.png" alt="Detailed infographic displaying interconnected news sources and verification paths, with icons for students reading articles, checking facts on screens, and discussing in group settings, styled in a modern data visualization format with blue gradients and clean lines" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white text-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Key Features for Informed Students</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="article-card bg-gradient-to-br from-blue-50 to-indigo-100 p-6 rounded-lg shadow-lg fade-in">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2751f735-9cc3-45e3-a930-2fa3d18ac847.png" alt="Screenshot-style image of a news dashboard showing articles categorized by education, technology, and events, with user customizations like saved sources and topic flags, in a sleek mobile app layout with blue tones and interactive elements" />
+                    <h3 class="text-xl font-semibold mb-4">Personalized News Feed</h3>
+                    <p>Curate your own stream of news based on interests like academia, technology, global affairs, and campus buzz.</p>
+                </div>
+                <div class="article-card bg-gradient-to-br from-green-50 to-emerald-100 p-6 rounded-lg shadow-lg fade-in delay-200">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/337121f9-9936-46ce-b336-f5377ed3cd09.png" alt="Interactive tool interface depicting a verification checklist with green checkmarks for credible sources, red warnings for suspicious claims, and magnifying glass icons for deep dives, designed as a web page tool in a clean, educational style" />
+                    <h3 class="text-xl font-semibold mb-4">Fact-Checking Toolkit</h3>
+                    <p>Access integrated tools to verify claims, cross-reference sources, and avoid misinformation traps.</p>
+                </div>
+                <div class="article-card bg-gradient-to-br from-purple-50 to-violet-100 p-6 rounded-lg shadow-lg fade-in delay-400">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ed03b17a-6a6f-43cc-b30d-8653c0660262.png" alt="Illustrated tutorial pages with step-by-step guides on news analysis, featuring students interacting with screens, annotation tools, and discussion bubbles, rendered in a vibrant purple and white educational infographic style" />
+                    <h3 class="text-xl font-semibold mb-4">Interactive Tutorials</h3>
+                    <p>Learn through engaging modules on media literacy, bias recognition, and critical thinking for today's news cycle.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Quiz Section -->
+    <section class="py-16 bg-gray-200 text-gray-800">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-12">Test Your News Savvy</h2>
+            <p class="text-lg mb-8">Answer a quick quiz to gauge your ability to navigate news sources.</p>
+            <div id="quiz" class="max-w-lg mx-auto">
+                <div class="quiz-question">
+                    <p class="text-lg mb-4">Question 1: What's the best way to verify a news claim?</p>
+                    <div class="space-y-2">
+                        <button class="quiz-option w-full bg-white p-3 rounded-lg shadow hover:bg-blue-100" data-answer="a">Check only the headline</button>
+                        <button class="quiz-option w-full bg-white p-3 rounded-lg shadow hover:bg-blue-100" data-answer="b">Cross-reference multiple sources</button>
+                        <button class="quiz-option w-full bg-white p-3 rounded-lg shadow hover:bg-blue-100" data-answer="c">Believe if it's viral</button>
+                    </div>
+                </div>
+            </div>
+            <p id="quiz-result" class="mt-8 hidden text-xl font-semibold"></p>
+            <button id="reset-quiz" class="mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg hidden">Try Again</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2023 InsightStream. Built for College Students by Educators.</p>
+            <p>Contact: info@insightstream.edu</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll to sections
+        document.getElementById('cta-btn').addEventListener('click', () => {
+            document.querySelector('section:nth-of-type(2)').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Simple Quiz Logic
+        const options = document.querySelectorAll('.quiz-option');
+        const result = document.getElementById('quiz-result');
+        const resetBtn = document.getElementById('reset-quiz');
+
+        options.forEach(option => {
+            option.addEventListener('click', () => {
+                if (option.dataset.answer === 'b') {
+                    result.textContent = 'Great! You know the drill. Cross-referencing is key.';
+                    result.classList.remove('text-red-600');
+                    result.classList.add('text-green-600');
+                } else {
+                    result.textContent = 'Not quite. Try cross-referencing multiple sources!';
+                    result.classList.remove('text-green-600');
+                    result.classList.add('text-red-600');
+                }
+                result.classList.remove('hidden');
+                resetBtn.classList.remove('hidden');
+            });
+        });
+
+        resetBtn.addEventListener('click', () => {
+            result.classList.add('hidden');
+            resetBtn.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
+</content>
+</create_file>
